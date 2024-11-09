@@ -1,0 +1,12 @@
+package banking.account;
+
+public class Main {
+
+	public static void main(String[] args) {
+		account a1=new account("name1",123455,0.0);
+		transaction t1=new transaction();
+		
+
+	}
+
+}

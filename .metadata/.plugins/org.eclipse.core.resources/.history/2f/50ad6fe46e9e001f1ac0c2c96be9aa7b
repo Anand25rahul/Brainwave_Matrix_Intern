@@ -1,0 +1,34 @@
+package banking.account;
+
+
+public class transaction {
+	public void deposit(double amt,account a1)
+	{
+		if(amt >= 0)
+		{
+			a1.setBal(a1.getBal()+amt);
+			checkbal(a1);
+		}
+		else {
+			System.out.println("Invalid amt");
+		}
+		
+	}
+	public void withdraw(double amt,account a1)
+	{
+		if(amt >= 0 && a1.getBal() >= amt)
+		{
+			a1.setBal(a1.getBal()-amt);
+			checkbal(a1);
+		}
+		else {
+			System.out.println("Insufficient bal");
+		}
+	}
+	public void checkbal(account a1)
+	{
+		System.out.println("current bal ="+a1.getBal() );
+	}
+	
+
+}

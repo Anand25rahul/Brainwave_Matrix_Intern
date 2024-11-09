@@ -1,0 +1,14 @@
+package banking.account;
+
+public class Main {
+
+	public static void main(String[] args) {
+		account a1=new account("Rahul",123455,0.0);
+		transaction t1=new transaction();
+		t1.checkbal(a1);
+		t1.deposit(25, a1);
+		t1.withdraw(10, a1);
+
+	}
+
+}

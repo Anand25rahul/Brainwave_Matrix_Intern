@@ -1,0 +1,24 @@
+package banking.services;
+
+import java.util.Scanner;
+
+import banking.account.*;
+
+
+public class ATM {
+    private double balance;  // User's account balance
+
+    // Constructor to initialize the balance
+    public ATM() {
+        balance = 0.0;
+    }
+
+    // Method to display the main menu
+    public void displayMenu() {
+        System.out.println("Welcome to the ATM!");
+        System.out.println("1. Check Balance");
+        System.out.println("2. Deposit Money");
+        System.out.println("3. Withdraw Money");
+        System.out.println("4. Exit");
+    }
+}

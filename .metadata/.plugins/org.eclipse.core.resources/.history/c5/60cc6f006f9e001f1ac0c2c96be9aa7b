@@ -1,0 +1,43 @@
+package banking.services;
+
+import java.util.Scanner;
+
+import banking.account.*;
+
+
+public class Atm implements BankUser {
+	account a1;
+	transaction t1;
+	public Atm(account a1,transaction t1){
+		this.a1=a1;
+		this.t1=t1;
+		
+	}
+
+	@Override
+	public void transfer() {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("<<< Welcome to ATM >>> ");
+		System.out.println("Enter your choice 1.Deposite  2.Withdraw ");
+		int choice=sc.nextInt();
+		if(choice==1) {
+			System.out.println("Enter your Deposite Ammount ");
+			double amt=sc.nextInt();
+			t1.deposit(amt, a1);
+		}
+		else if(choice==2) {
+			System.out.println("Enter your Withdraw amount ");
+			int withAmt=sc.nextInt();
+			t1.withdraw(withAmt, a1);
+		}
+		else {
+			System.out.println("Invalid choice");
+		}
+
+
+		
+		
+	}
+	
+
+}
